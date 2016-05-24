@@ -7,5 +7,6 @@ export default () => ({
   scope: {},
   template,
   controller,
-  controllerAs: 'ctrl',
+  controllerAs: 'vm',
+  bindToController: true,
 });

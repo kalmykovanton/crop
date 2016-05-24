@@ -31,7 +31,7 @@ module.exports = {
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
       { test: /\.less$/, loader: 'style!css!less' },
       { test: /\.(ttf|eot|svg)(.*)?$/, loader: 'file?name=fonts/[name].[ext]' },
-      { test: /\.(png|jpg|gif|woff|woff2)$/, loader: 'url?limit=10000&name=img/[name].[ext]' },
+      { test: /\.(png|jpg|jpeg|gif|woff|woff2)$/, loader: 'url?limit=10000&name=img/[name].[ext]' },
       { test: /\.json$/, loader: 'json' },
       { test: /\.html$/, loader: 'html' },
     ],
@@ -47,4 +47,12 @@ module.exports = {
     //   jQuery: 'jquery',
     // }),
   ],
+
+  devServer: {
+    contentBase: './dist',
+    // historyApiFallback: true,
+    colors: true,
+    hot: true,
+    port: 8080,
+  },
 };
